@@ -1,0 +1,444 @@
+@charset "UTF-8";
+
+/*共通部分
+-------------------------------------*/
+body {
+    background-color: #bfe8cf;
+    font-family: "Zen Maru Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    text-align: center;
+}
+
+.wf-kokoro {
+    font-family: "Kokoro";
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2,
+h3,
+h4 {
+    font-size: 25px;
+    padding: 20px 20px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+/*ヘッダー
+-------------------------------------*/
+.page-header {
+    padding: .5rem;
+}
+
+.logo {
+    width: 390px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.large {
+    font-size: 35px;
+    padding: 40px;
+
+}
+
+/*スライドショー
+-------------------------------------*/
+/* スライドショー全体 */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* スライド画像 */
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease;
+    z-index: 0;
+}
+
+/* 表示中の画像 */
+.slideshow .slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/*コンセプト
+-------------------------------------*/
+h4 {
+    margin: 15px 10px;
+}
+
+p {
+    padding: 15px;
+}
+
+.concept {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*フェードイン*/
+.fade-in-container {
+    margin: 25px;
+    align-items: center;
+    gap: 20px;
+}
+
+.fade-in-item {
+    flex: 1;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transition: opacity 5s ease-out;
+}
+
+.fade-in-element.visible {
+    border-radius: 50px;
+    opacity: 1;
+
+}
+
+/*メニュー
+-------------------------------------*/
+.menu,
+.news {
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #fff8cf;
+    padding-bottom: 20px;
+    border-radius: 50px;
+}
+
+.container-m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-m img {
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+a.btn-m {
+    padding: 0.5em;
+    width: 800px;
+    height: 75px;
+    margin: 70px auto;
+    display: block;
+    color: #fff;
+    background-color: #339900;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 40px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+a.btn-m p::after {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: -3px 0 0 5px;
+    background: url(images/ris-icon.png)no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+
+}
+
+a.btn-m:hover{
+    background: #adcc33;
+    color: #000;
+}
+
+/*おしらせ
+-------------------------------------*/
+.blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* レスポンシブ2列 */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-item {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.blog-item img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.blog-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.blog-text .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.blog-text .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+/*アクセス
+-------------------------------------*/
+.access {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    padding-bottom: 50px;
+}
+
+.info-img {
+    width: 500px;
+    height: auto;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.info th {
+    font-weight: normal;
+    width: 240px;
+    height: auto;
+}
+
+.info td {
+    flex-wrap: wrap;
+    width: 310px;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.info td p {
+    padding-top: 4px;
+
+}
+
+/*snsアイコン
+-------------------------------------*/
+footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #fff8cf;
+
+}
+
+ul.icons {
+    margin: 20px 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    justify-content: center;
+}
+
+.icon-s {
+    width: 40px;
+    height: auto;
+
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    background-color: #fff8cf;
+    padding-top: 25px;
+}
+
+/* ハンバーガー初期非表示 */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+/*レスポンシブ
+-------------------------------------*/
+
+@media screen and (max-width:768px) {
+
+    p {
+        font-size: 20px;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #fff8cf;
+        padding: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 1rem;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .main-nav li a {
+        display: block;
+        padding: 0.25rem;
+        color: #000;
+        background-color: #fff8cf;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .main-nav li a:hover{
+        background-color: #d8e5a6;
+        outline: none;
+
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        color: #333;
+    }
+
+    .logo {
+        width: 80%;
+        margin: auto;
+    }
+
+    .concept {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+
+    }
+    .slide,
+    .fade-in-element {
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .menu {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .container-m {
+        flex-direction: column;
+        font-weight: bold;
+    }
+
+    .container-m img {
+        width: 90%;
+        height: auto;
+    }
+
+    a.btn-m {
+        width: 90%;
+        height: auto;
+        font-size: 1.2rem;
+    }
+
+    .news {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+
+    }
+
+    .blog {
+        padding: auto;
+    }
+
+    .access {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+
+    }
+
+    .info {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .info-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .info td,
+    .info th {
+        width: 90%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    footer {
+        width: 90;
+    }
+}
