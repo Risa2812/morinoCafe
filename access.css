@@ -82,7 +82,24 @@
     text-align: center;
     cursor: pointer;   
 }
-
+button.btn-m {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    font-family: inherit;
+    padding: 0.5em;
+    color: #fff;
+    background-color: #339900;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 40px;
+    text-align: center;
+}
+ 
+button.btn-m:hover {
+    background: #adcc33;
+    color: #000;
+}
 .reserve-thanks {
     max-width: 480px;
     margin: 0 auto;
