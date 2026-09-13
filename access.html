@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アクセス・ご予約 | もりのカフェ</title>
+    <meta name="description" content="もりのカフェ 山奥店へのアクセスとご予約はこちらから">
+    <!--レスポンシブ-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!--ファビコン-->
+    <link rel="icon" type="images/png" href="images/favicon.png">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kosugi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Philosopher&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+Antique&family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic:wght@400;500;700&family=Klee+One:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!--オリジナルCSS(既存)-->
+    <link rel="stylesheet" href="style.css">
+    <!--このページ専用の追加CSS(既存styleは変更せず、追記ファイルのみ読み込む)-->
+    <link rel="stylesheet" href="access.css">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <h1 class="logo">
+            <a href="index.html"><img class="logo" src="images/logo2 (1).png" alt="もりのカフェほーむ"></a>
+        </h1>
+
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+        <ul class="main-nav wf-kleeone" id="nav">
+            <li><a href="index.html#concept">コンセプト</a></li>
+            <li><a href="index.html#menu">メニュー</a></li>
+            <li><a href="index.html#news">おしらせ</a></li>
+            <li><a href="access.html" class="current">アクセス</a></li>
+            <li><a href="access.html#reserve">よやく</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!--ページタイトル-->
+        <section class="page-title">
+            <h2 class="large wf-kleeone">アクセス・ご予約</h2>
+            <p>もりのカフェ 山奥店へのアクセスと、ご予約はこちらから</p>
+        </section>
+
+        <!--アクセス(既存トップページと同じ構造・クラスを再利用)-->
+        <section class="access">
+            <h3 class="large wf-kleeone">アクセス</h3>
+            <h5>もりのカフェ 山奥店</h5>
+            <div class="info">
+                <img class="info-img" src="images/tengai.jpg" alt="外観">
+                <table>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>10:00～21:00</td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td>不定休</td>
+                    </tr>
+                    <tr>
+                        <th>アクセス</th>
+                        <td>神奈川県〇〇市△△町＊＊＊＊<br>
+                            <a href="#" target="_blank" rel="noopener">Google map</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>お問い合わせ</th>
+                        <td>0000-***-****</td>
+                    </tr>
+                    <tr>
+                        <th>駐車スペース</th>
+                        <td>20台</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--地図埋め込み用エリア(ダミー)-->
+            <div class="map-embed">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+                    width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="もりのカフェ 山奥店 地図"></iframe>
+            </div>
+        </section>
+
+        <!--ご予約フォーム-->
+        <section class="reserve" id="reserve">
+            <h3 class="large wf-kleeone">よやく</h3>
+            <p class="reserve-lead">下記フォームよりご希望の日時をお送りください。折り返しご連絡いたします。</p>
+
+            <form id="reserve-form" class="reserve-form" novalidate>
+                <div class="form-row">
+                    <label for="name">お名前<span class="required">必須</span></label>
+                    <input type="text" id="name" name="name" placeholder="山田 太郎">
+                    <p class="error-msg" id="error-name"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="date">ご希望日<span class="required">必須</span></label>
+                    <input type="date" id="date" name="date">
+                    <p class="error-msg" id="error-date"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="time">ご希望時間<span class="required">必須</span></label>
+                    <input type="time" id="time" name="time">
+                    <p class="error-msg" id="error-time"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="people">人数<span class="required">必須</span></label>
+                    <input type="number" id="people" name="people" min="1" max="20" placeholder="2">
+                    <p class="error-msg" id="error-people"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="tel">電話番号<span class="required">必須</span></label>
+                    <input type="tel" id="tel" name="tel" placeholder="09000000000">
+                    <p class="error-msg" id="error-tel"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="memo">ご要望(任意)</label>
+                    <textarea id="memo" name="memo" rows="3" placeholder="アレルギー、お席のご希望など"></textarea>
+                </div>
+
+                <button type="submit" class="btn-m reserve-submit">
+                    <p>この内容で予約する</p>
+                </button>
+            </form>
+
+            <!--送信完了メッセージ(JSで表示切替)-->
+            <div class="reserve-thanks" id="reserve-thanks" hidden>
+                <p>ご予約ありがとうございます。内容を確認のうえ、ご連絡いたします。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="icons">
+            <li>
+                <a href="#"><img class="icon-s" src="images/icon_insta.png"></a>
+            </li>
+            <li>
+                <a href="#"><img class="icon-s" src="images/icon_twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img class="icon-s" src="images/icon_youtube.png"></a>
+            </li>
+            <li>
+                <a href="#"><img class="icon-s" src="images/ris-icon.png"></a>
+            </li>
+        </ul>
+
+        <div class="copyright">
+            <small>Copyright&copy; <a href="index.html">もりのカフェ</a> All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <!--Javascript(既存)-->
+    <script src="js/script.js" defer></script>
+    <!--このページ専用の予約フォームJS-->
+    <script src="js/reserve.js" defer></script>
+</body>
+
+</html>

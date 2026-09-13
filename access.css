@@ -1,0 +1,98 @@
+/* access.html 専用の追加スタイル
+   既存の style.css は変更せず、このファイルのみ後から読み込みます */
+
+.page-title {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.page-title p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.map-embed {
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.reserve {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.reserve-lead {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.reserve-form {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-row .required {
+    color: #c0392b;
+    font-size: 0.75em;
+    margin-left: 8px;
+    border: 1px solid #c0392b;
+    border-radius: 4px;
+    padding: 1px 6px;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.form-row input.input-error,
+.form-row textarea.input-error {
+    border-color: #c0392b;
+}
+
+.error-msg {
+    color: #c0392b;
+    font-size: 0.8em;
+    margin-top: 4px;
+    min-height: 1em;
+}
+
+.reserve-submit {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 10px auto 0;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.reserve-thanks {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f3f7f1;
+    border-radius: 10px;
+}
+
+.main-nav .current {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
