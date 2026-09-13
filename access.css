@@ -59,6 +59,7 @@
     border-radius: 6px;
     font-size: 1em;
     font-family: inherit;
+    background-color: #fff;
 }
 
 .form-row input.input-error,
